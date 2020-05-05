@@ -1,9 +1,6 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
-from scipy.optimize import curve_fit
-import lmfit
 import json
 
 p = {"bsplit": 0.47,        # Beam splitter ratio
@@ -67,6 +64,7 @@ def sim(p,W):
     V = 1-p_12/p_12_0
     
     # Mysterious parameter of coincidence count rate in distinghuishable case.
+    # --- I GUESS THIS IS VERY WRONG ??? ---
     X = d.index*p_12_0
     
     # Append to dataframe
